@@ -1,7 +1,7 @@
-{% if include.'index.js' or include.js %}
+{% if include.index.js or include.js %}
   {% unless include.displayonly %}
-    {% if include.'index.js' %}
-      <script>{% include_relative {{include.'index.js'}} %}</script>
+    {% if include.index.js %}
+      <script>{% include_relative {{include.index.js}} %}</script>
     {% else %}
       <script>{{include.js}}</script>
     {% endif %}
@@ -13,8 +13,8 @@
     <h3>{{include.title}}</h3>
   {% endif %}
 
-  {% if include.'index.js' %}
-    {% highlight js %}{% include_relative {{include.'index.js'}} %}{% endhighlight %}
+  {% if include.index.js %}
+    {% highlight js %}{% include_relative {{include.index.js}} %}{% endhighlight %}
   {% else %}
     {% highlight js %}{{include.js}}{% endhighlight %}
   {% endif %}
